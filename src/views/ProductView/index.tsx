@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './styles.module.scss';
+import Section from '../../components/Section';
 import ProductController from '../../components/ProductController';
+import styles from './styles.module.scss';
 
 
 type Props = {
@@ -8,10 +9,12 @@ type Props = {
 };
 
 const ProductView = ({ children } : Props) => (
-  <section className={styles.ProductView}>
+  <div className={styles.ProductView}>
     <ProductController />
-    {children}
-  </section>
+    <Section>
+      {children}
+    </Section>
+  </div>
 );
 
 export default ProductView;
