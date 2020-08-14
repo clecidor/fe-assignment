@@ -13,14 +13,17 @@
 
   .options {
     display: flex;
-    flex: 0 4 800px;
+    flex: 0 4 1000px;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }
 
   .buttons {
     display: flex;
     flex: 0 1 150px;
     flex-direction: row-reverse;
+    align-items: center;
   }
 }

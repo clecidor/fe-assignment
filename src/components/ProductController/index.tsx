@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 import Section from '../Section';
+import Selector from '../Selector';
 import styles from './styles.module.scss';
 
 
@@ -13,11 +14,11 @@ const ProductController = ({ children } : Props) => (
     <div className={styles.options}>
       <label>
         <strong>Select Appliances:</strong>
-        <select><option>4 Appliances Selected</option></select>
+        <Selector><option>4 Appliances Selected</option></Selector>
       </label>
       <label>
         <strong>Sort By:</strong>
-        <select><option>Highest Price</option></select>
+        <Selector><option>Highest Price</option></Selector>
       </label>
       <label>
         <strong>Delivery Method:</strong>
