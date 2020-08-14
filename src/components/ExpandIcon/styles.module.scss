@@ -1,0 +1,17 @@
+.ExpandIcon {
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  height: 15px;
+  width: 15px;
+
+  &img {
+    display: block;
+  }
+}
