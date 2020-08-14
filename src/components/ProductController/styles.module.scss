@@ -1,7 +1,25 @@
 .ProductController {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
   background: #FBFBFB;
   border: 1px solid #F0EDED;
   border-left-width: 0;
   border-right-width: 0;
-  height: 85px;
+  min-height: 85px;
+
+  .options {
+    display: flex;
+    flex: 0 4 800px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .buttons {
+    display: flex;
+    flex: 0 1 150px;
+    flex-direction: row-reverse;
+  }
 }
