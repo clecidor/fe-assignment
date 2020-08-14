@@ -1,0 +1,13 @@
+.SortFilterView {
+  .header {
+    border-bottom: 1px solid #F0EDED;
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  .close {
+    position: absolute !important;
+    right: 0;
+    top: 0;
+  }
+}
