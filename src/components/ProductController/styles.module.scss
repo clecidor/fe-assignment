@@ -1,4 +1,29 @@
 .ProductController {
+  .MobileController {
+    display: block;
+  }
+  .DesktopController {
+    display: none;
+  }
+
+  @media screen and (min-width: 769px) {
+    .MobileController {
+      display: none;
+    }
+    .DesktopController {
+      display: flex;
+    }
+  }
+}
+
+.MobileController {
+  .button {
+    color: #23408A;
+    width: 100%;
+  }
+}
+
+.DesktopController {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
