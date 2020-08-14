@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import styles from './styles.module.scss';
 
 
@@ -9,7 +10,7 @@ type Props = {
 };
 
 const Section = ({ title, className, children, ...props } : Props) => (
-  <section className={styles.Section} {...props}>
+  <section className={classnames(styles.Section, className)} {...props}>
     {title && <h2 className={styles.title}>{title}</h2>}
     {children}
   </section>
