@@ -1,0 +1,37 @@
+.Selector {
+  position: relative !important;
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  outline: none;
+
+  height: 45px;
+  min-width: 250px;
+  margin: 0;
+  padding: 0;
+
+  .select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: #666666;
+    font-family: HelveticaNeue, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    text-indent: 1em;
+  }
+
+  .arrow {
+    pointer-events: none !important;
+    right: 1em;
+    position: absolute !important;
+
+  }
+}
