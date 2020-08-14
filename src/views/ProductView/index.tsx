@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../components/Button';
 import Section from '../../components/Section';
 import ProductController from '../../components/ProductController';
 import Product from '../../components/Product';
@@ -31,6 +32,9 @@ const ProductView = ({ children } : Props) => (
       <Product />
       <Product />
       {children}
+    </Section>
+    <Section className={styles.footer}>
+      <Button className={styles.paginator}>Show More</Button>
     </Section>
   </div>
 );
