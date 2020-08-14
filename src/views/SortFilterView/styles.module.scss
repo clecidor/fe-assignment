@@ -10,4 +10,16 @@
     right: 0;
     top: 0;
   }
+
+  .fieldset {
+    max-width: 300px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+  }
 }

@@ -18,16 +18,18 @@ const SortFilterView = ({ children } : Props) => (
     <Header title="Sort & Filter" className={styles.header}>
       <Link to="/products"><img src={CloseIcon} alt="Close Icon" className={styles.close} /></Link>
     </Header>
-    <Fieldset title="Sort By:" className={styles.options}>
+    <Fieldset title="Sort By:" className={styles.fieldset}>
       <label>
         <Selector><option>Highest Price</option></Selector>
       </label>
     </Fieldset>
-    <Fieldset title="Filter By:" className={styles.buttons}>
-      <Button>Clear All</Button>
-      <Button>Apply</Button>
+    <Fieldset title="Filter By:" className={styles.fieldset}>
+      <div className={styles.buttons}>
+        <Button>Clear All</Button>
+        <Button>Apply</Button>
+      </div>
     </Fieldset>
-    <Fieldset title="Select Appliances:" collapsible={true}>
+    <Fieldset title="Select Appliances:" className={styles.fieldset} collapsible={true}>
       <ul>
         <li><label><input type="checkbox" /> Refrigerators</label></li>
         <li><label><input type="checkbox" /> Gas Range</label></li>
@@ -40,7 +42,7 @@ const SortFilterView = ({ children } : Props) => (
         <li><label><input type="checkbox" /> Wall-oven</label></li>
       </ul>
     </Fieldset>
-    <Fieldset title="Delivery Method:" collapsible={true}>
+    <Fieldset title="Delivery Method:" className={styles.fieldset} collapsible={true}>
       <ul>
         <li><label><input type="checkbox" /> Quick Ship</label></li>
       </ul>
