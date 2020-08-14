@@ -10,12 +10,12 @@ type Props = {
 };
 
 export const Selector = ({ className, children, ...props }: Props) => (
-  <div className={classnames(styles.Selector, className)} {...props}>
+  <span className={classnames(styles.Selector, className)} {...props}>
     <select className={styles.select}>
       {children}
     </select>
     <img src={ArrowDown} className={styles.arrow} alt="" />
-  </div>
+  </span>
 );
 
 export default Selector;
