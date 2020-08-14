@@ -21,7 +21,7 @@ export const Product = (props: Props) => (
   <div className={styles.Product}>
     <img className={styles.image} src={props.image || DefaultImage} alt="Product preview" />
     <p className={styles.description}>
-      <span className={styles.series}>Viking 5 Series</span>
+      <strong className={styles.series}>Viking 5 Series&nbsp;</strong>
       4 Piece Kitchen Appliances Package with Side-by Side Refrigerator, Gas Range and Dishwasher in Stainless Steel
     </p>
     <img className={styles.quickship} src={QuickShipSVG} alt="Quick Ship" />
