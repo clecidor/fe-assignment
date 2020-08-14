@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
+import Fieldset from '../../components/Fieldset';
 import Header from '../../components/Header';
 import Section from '../../components/Section';
 import Selector from '../../components/Selector';
@@ -17,21 +18,16 @@ const SortFilterView = ({ children } : Props) => (
     <Header title="Sort & Filter" className={styles.header}>
       <Link to="/products"><img src={CloseIcon} alt="Close Icon" className={styles.close} /></Link>
     </Header>
-    <fieldset className={styles.options}>
+    <Fieldset title="Sort By:" className={styles.options}>
       <label>
-        <strong>Sort By:</strong>
         <Selector><option>Highest Price</option></Selector>
       </label>
-    </fieldset>
-    <fieldset className={styles.buttons}>
-      <strong>Filter By:</strong>
-      <div>
-        <Button>Clear All</Button>
-        <Button>Apply</Button>
-      </div>
-    </fieldset>
-    <fieldset>
-      <strong>Select Appliances:</strong>
+    </Fieldset>
+    <Fieldset title="Filter By:" className={styles.buttons}>
+      <Button>Clear All</Button>
+      <Button>Apply</Button>
+    </Fieldset>
+    <Fieldset title="Select Appliances:" collapsible={true}>
       <ul>
         <li><label><input type="checkbox" /> Refrigerators</label></li>
         <li><label><input type="checkbox" /> Gas Range</label></li>
@@ -43,13 +39,12 @@ const SortFilterView = ({ children } : Props) => (
         <li><label><input type="checkbox" /> Cooktop</label></li>
         <li><label><input type="checkbox" /> Wall-oven</label></li>
       </ul>
-    </fieldset>
-    <fieldset>
-      <strong>Delivery Method:</strong>
+    </Fieldset>
+    <Fieldset title="Delivery Method:" collapsible={true}>
       <ul>
         <li><label><input type="checkbox" /> Quick Ship</label></li>
       </ul>
-    </fieldset>
+    </Fieldset>
     {children}
   </Section>
 );
