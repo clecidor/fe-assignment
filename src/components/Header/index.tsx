@@ -12,7 +12,7 @@ type Props = {
 const Header = ({ title, className, children } : Props) => (
   <header className={classnames(styles.Header, className)}>
     {title && <h1 className={styles.title}>{title}</h1>}
-    <p>{children}</p>
+    {children}
   </header>
 );
 
