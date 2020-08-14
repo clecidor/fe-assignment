@@ -1,0 +1,23 @@
+.Fieldset {
+  margin: 0;
+  padding: 0;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
