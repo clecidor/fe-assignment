@@ -1,0 +1,19 @@
+.Button {
+  background: #F5F5F5;
+  border: 1px solid #9B9B9B;
+  box-sizing: border-box;
+  color: #3B8448;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+
+  height: 40px;
+  max-height: 40px;
+  width: auto;
+
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
