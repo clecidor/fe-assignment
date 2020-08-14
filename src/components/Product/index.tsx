@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../Button';
 import DefaultImage from './images/default.jpg';
 import QuickShipSVG from './images/quickship.svg';
 // import QuickShip from './images/quickship-pdp.png';
@@ -31,7 +32,7 @@ export const Product = (props: Props) => (
     </div>
     {props.children}
 
-    <button className={styles.view_package}>View Package</button>
+    <Button className={styles.view_package}>View Package</Button>
   </div>
 );
 
