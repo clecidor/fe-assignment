@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './images/logo.svg';
 import styles from './styles.module.scss';
 
-const HomeView = () => (
+const AppView = () => (
   <div className={styles["App"]}>
     <header className={styles["App-header"]}>
       <img src={logo} className={styles["App-logo"]} alt="logo" />
@@ -21,4 +21,4 @@ const HomeView = () => (
   </div>
 );
 
-export default HomeView;
+export default AppView;
