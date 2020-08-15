@@ -17,7 +17,7 @@ const Fieldset = ({ title, className, children, collapsible, open, ...props } : 
   const showChildren = !collapsible || (collapsible && isOpen);
 
   return (
-    <fieldset className={classnames(styles.Fieldset, className)} {...props}>
+    <fieldset className={classnames(styles.Fieldset, className, { isOpen })} {...props}>
       <header className={styles.header}>
         <strong className={styles.title}>{title}</strong>
         {collapsible && <ExpandIcon open={isOpen} onClick={() => setOpen(!isOpen)} />}

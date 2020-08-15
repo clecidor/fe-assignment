@@ -16,8 +16,13 @@
   }
 
   .fieldset {
-    border: 0;
-    border-bottom: 1px solid #F0EDED;
+    & > fieldset {
+      border-bottom: 1px solid #F0EDED;
+
+      ul {
+        padding-bottom: 15px;
+      }
+    }
   }
 
   .buttons {

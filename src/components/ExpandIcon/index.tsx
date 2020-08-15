@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 type Props = {
   open?: boolean;
-  onClick?: React.MouseEventHandler<any>
+  onClick?: React.MouseEventHandler<Element>
   className?: string;
   children?: React.ReactNode;
 };
