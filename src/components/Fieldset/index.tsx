@@ -7,12 +7,13 @@ import styles from './styles.module.scss';
 type Props = {
   title?: string;
   collapsible?: boolean;
+  open?: boolean;
   className?: string;
   children: React.ReactNode;
 };
 
-const Fieldset = ({ title, className, children, collapsible, ...props } : Props) => {
-  const [isOpen, setOpen] = React.useState(true);
+const Fieldset = ({ title, className, children, collapsible, open, ...props } : Props) => {
+  const [isOpen, setOpen] = React.useState(open);
   const showChildren = !collapsible || (collapsible && isOpen);
 
   return (
