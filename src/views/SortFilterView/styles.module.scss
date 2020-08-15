@@ -11,8 +11,13 @@
     top: 0;
   }
 
-  .fieldset {
+  .container {
     max-width: 300px;
+  }
+
+  .fieldset {
+    border: 0;
+    border-bottom: 1px solid #F0EDED;
   }
 
   .buttons {

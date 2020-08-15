@@ -4,7 +4,9 @@ import Button from '../../components/Button';
 import Fieldset from '../../components/Fieldset';
 import Header from '../../components/Header';
 import Section from '../../components/Section';
-import Selector from '../../components/Selector';
+import { ApplianceChecklist } from '../../components/FieldsetApplianceTypes';
+import { DeliveryChecklist } from '../../components/FieldsetDeliveryTypes';
+import { SortSelector } from '../../components/FieldsetSortTypes';
 import CloseIcon from './images/CloseIcon.svg';
 import styles from './styles.module.scss';
 
@@ -18,35 +20,21 @@ const SortFilterView = ({ children } : Props) => (
     <Header title="Sort & Filter" className={styles.header}>
       <Link to="/products"><img src={CloseIcon} alt="Close Icon" className={styles.close} /></Link>
     </Header>
-    <Fieldset title="Sort By:" className={styles.fieldset}>
-      <label>
-        <Selector><option>Highest Price</option></Selector>
-      </label>
-    </Fieldset>
-    <Fieldset title="Filter By:" className={styles.fieldset}>
-      <div className={styles.buttons}>
-        <Button>Clear All</Button>
-        <Button>Apply</Button>
+    <div className={styles.container}>
+      <SortSelector />
+      <Fieldset title="Filter By:">
+        <div className={styles.buttons}>
+          <Button>Clear All</Button>
+          <Button>Apply</Button>
+        </div>
+      </Fieldset>
+      <div className={styles.fieldset}>
+        <ApplianceChecklist />
       </div>
-    </Fieldset>
-    <Fieldset title="Select Appliances:" className={styles.fieldset} collapsible={true}>
-      <ul>
-        <li><label><input type="checkbox" /> Refrigerators</label></li>
-        <li><label><input type="checkbox" /> Gas Range</label></li>
-        <li><label><input type="checkbox" /> Electric Range</label></li>
-        <li><label><input type="checkbox" /> Dual Fuel Range</label></li>
-        <li><label><input type="checkbox" /> Range Hoods</label></li>
-        <li><label><input type="checkbox" /> Dishwasher</label></li>
-        <li><label><input type="checkbox" /> Over the Range Microwave</label></li>
-        <li><label><input type="checkbox" /> Cooktop</label></li>
-        <li><label><input type="checkbox" /> Wall-oven</label></li>
-      </ul>
-    </Fieldset>
-    <Fieldset title="Delivery Method:" className={styles.fieldset} collapsible={true}>
-      <ul>
-        <li><label><input type="checkbox" /> Quick Ship</label></li>
-      </ul>
-    </Fieldset>
+      <div className={styles.fieldset}>
+        <DeliveryChecklist />
+      </div>
+    </div>
     {children}
   </Section>
 );
