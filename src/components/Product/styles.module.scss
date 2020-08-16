@@ -1,13 +1,20 @@
 .Product {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
   font-family: Roboto, Arial, HelveticaNeue, sans-serif;
   margin: 0 0 30px 0;
   padding: 0;
   width: 305px;
 
+
   .image {
     display: inline-block;
     margin-bottom: 15px;
+    max-height: 195px;
+    max-width: 305px;
+    height: 100%;
     width: 100%;
   }
 

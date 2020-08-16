@@ -14,6 +14,7 @@ type Props = {
   products: ProductType[],
 };
 
+
 const ProductView = ({ products=[], ...props } : Props) => (
   <div className={styles.ProductView} {...props}>
     <ProductController />
@@ -28,6 +29,7 @@ const ProductView = ({ products=[], ...props } : Props) => (
           final_price={product.prices?.final}
           save={product.prices && (product.prices?.list_price - product.prices?.final)}
           is_quick_ship={product.is_quick_ship}
+          url={`https://www.ajmadison.com${product.url}`}
         />
       ))}
     </Section>

@@ -9,6 +9,7 @@ import styles from './styles.module.scss';
 type Props = {
   description?: string;
   image?: string;
+  url?: string;
   series?: string;
   final_price?: string | number;
   save?: string | number;
@@ -17,22 +18,25 @@ type Props = {
   children?: React.ReactNode;
 };
 
+const formatPrice = (price: string | number) => Number(price).toLocaleString('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
 export const Product = (props: Props) => (
   <div className={styles.Product}>
     <img className={styles.image} src={props.image || DefaultImage} alt="Product preview" />
     <p className={styles.description}>
-      <strong className={styles.series}>Viking 5 Series&nbsp;</strong>
-      4 Piece Kitchen Appliances Package with Side-by Side Refrigerator, Gas Range and Dishwasher in Stainless Steel
+      {props.series && <strong className={styles.series}>{props.series}&nbsp;</strong>}
+      {props.description}
     </p>
-    <img className={styles.quickship} src={QuickShipSVG} alt="Quick Ship" />
-    <span className={styles.final_price}>$1,893.00</span>
+    {props.is_quick_ship && <img className={styles.quickship} src={QuickShipSVG} alt="Quick Ship" />}
+    {props.final_price && <span className={styles.final_price}>${formatPrice(props.final_price)}</span>}
     <div>
-      <span className={styles.save}>Save $905.19</span>
-      <span className={styles.list_price}>$2,099.99</span>
+      {props.save && <span className={styles.save}>Save ${formatPrice(props.save)}</span>}
+      {props.list_price && <span className={styles.list_price}>${formatPrice(props.list_price)}</span>}
     </div>
     {props.children}
-
-    <Button className={styles.view_package}>View Package</Button>
+    <a href={props.url} target="_blank" rel="noopener noreferrer">
+      <Button className={styles.view_package}>View Package</Button>
+    </a>
   </div>
 );
 
