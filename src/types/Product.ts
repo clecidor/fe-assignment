@@ -28,7 +28,7 @@ export type Product = {
     popularity?: string | null;
     url?: string;
     items?: RelatedItem[]
-    image?: Image;
+    image?: Image | undefined;
 };
 
 export default Product;
